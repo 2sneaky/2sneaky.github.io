@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="SolaraExec and Celery Executor - Powerful Roblox Lua scripts await!">
-    <meta name="keywords" content="SolaraExec, Celery Executor, Roblox, Lua, Script Executor">
+    <meta name="description" content="SolaraExec - Your powerful Roblox Lua script awaits!">
+    <meta name="keywords" content="SolaraExec, Roblox, Lua, Script Executor">
     <meta name="google-site-verification" content="pdSybNxX2etvIMhgGKQm4sijmzJzVmruNzekB7Zzk78" />
     <meta name="google-site-verification" content="KOVe9bX1ISz5fpLiFU-4x6VXSkdiS9Tf-kKS9tZjjqI" />
-    <title>SolaraExec & Celery Executor</title>
+    <title>SolaraExec</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -17,18 +17,10 @@
             color: #e0e0e0;
             opacity: 0;
             transition: opacity 1s ease-in;
-            display: flex;
-            height: 100vh;
-            overflow: hidden;
         }
         header {
             background-color: #333;
             padding: 10px 0;
-            width: 100%;
-            position: fixed;
-            top: 0;
-            left: 0;
-            z-index: 1;
         }
         nav ul {
             list-style-type: none;
@@ -54,45 +46,12 @@
         nav ul li a .icon {
             margin-right: 5px;
         }
-        .container {
-            display: flex;
-            width: 100%;
-        }
-        .sidebar {
-            width: 200px;
-            background-color: #333;
-            padding: 20px;
-            height: 100vh;
-            position: fixed;
-            top: 60px;
-            left: 0;
-            overflow: auto;
-            z-index: 1;
-        }
-        .sidebar a {
-            display: block;
-            color: #e0e0e0;
-            padding: 10px;
-            text-decoration: none;
-            margin-bottom: 10px;
-            transition: background-color 0.3s ease;
-        }
-        .sidebar a:hover {
-            background-color: #3498db;
-        }
-        .main-content {
-            margin-left: 220px;
-            padding: 20px;
-            width: calc(100% - 220px);
-            display: flex;
-            flex-direction: column;
-        }
         main {
             display: none;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            height: calc(100vh - 60px);
+            height: 100vh;
             text-align: center;
             opacity: 0;
             transition: opacity 0.5s ease-in-out;
@@ -113,6 +72,20 @@
         @keyframes spin {
             0% { transform: rotate(0deg); }
             100% { transform: rotate(360deg); }
+        }
+        /* Rainbow background animation */
+        @keyframes rainbow {
+            0% { background-color: #ff0000; }
+            14% { background-color: #ff7f00; }
+            28% { background-color: #ffff00; }
+            42% { background-color: #00ff00; }
+            57% { background-color: #0000ff; }
+            71% { background-color: #4b0082; }
+            85% { background-color: #9400d3; }
+            100% { background-color: #ff0000; }
+        }
+        #home {
+            animation: rainbow 10s linear infinite;
         }
         h1 {
             margin: 20px 0;
@@ -164,62 +137,77 @@
         <nav>
             <ul>
                 <li><a onclick="showPage('home')" aria-label="Home"><span class="icon">🏠</span> Home</a></li>
-                <li><a onclick="showPage('solaraExec')" aria-label="SolaraExec"><span class="icon">🔧</span> SolaraExec</a></li>
-                <li><a onclick="showPage('celeryExecutor')" aria-label="Celery Executor"><span class="icon">🔧</span> Celery Executor</a></li>
+                <li><a onclick="showPage('features')" aria-label="Features"><span class="icon">➕</span> Features</a></li>
                 <li><a onclick="showPage('download')" aria-label="Download"><span class="icon">⬇️</span> Download</a></li>
                 <li><a onclick="showPage('discord')" aria-label="Discord"><img src="https://cdn.prod.website-files.com/6257adef93867e50d84d30e2/636e0a6ac3c481f273141736_icon_clyde_black_RGB.png" alt="Discord Logo" class="icon" style="height: 20px;"> Discord</a></li>
             </ul>
         </nav>
     </header>
     
-    <div class="container">
-        <div class="sidebar">
-            <a href="#" onclick="showPage('solaraExec')">SolaraExec</a>
-            <a href="#" onclick="showPage('celeryExecutor')">Celery Executor</a>
-            <a href="#" onclick="showPage('download')">Download</a>
-            <a href="#" onclick="showPage('discord')">Discord</a>
+    <main id="home">
+        <h1>Welcome to SolaraExec</h1>
+        <p>Your powerful Roblox Lua script awaits!</p>
+    </main>
+    
+    <main id="features">
+        <h1>Features</h1>
+        <div class="info-section">
+            <h2>Features:</h2>
+            <ul>
+                <li>Beta testing should know only 61% unc!</li>
+                <li>Identity can be changed</li>
+                <li>Dark mode always enabled</li>
+                <li>Stays on live Roblox channel to execute scripts freely</li>
+                <li>No rats, no malware, and always no trojans!</li>
+            </ul>
         </div>
-        <div class="main-content">
-            <main id="home">
-                <h1>Welcome to SolaraExec and Celery Executor</h1>
-                <p>Your powerful Roblox Lua scripts await!</p>
-            </main>
-            
-            <main id="solaraExec">
-                <h1>SolaraExec</h1>
-                <div class="info-section">
-                    <h2>Features:</h2>
-                    <ul>
-                        <li>Beta testing should know only 61% unc!</li>
-                        <li>Identity can be changed</li>
-                        <li>Dark mode always enabled</li>
-                        <li>Stays on live Roblox channel to execute scripts freely</li>
-                        <li>No rats, no malware, and always no trojans!</li>
-                    </ul>
-                </div>
-            </main>
-            
-            <main id="celeryExecutor">
-                <h1>Celery Executor</h1>
-                <div class="info-section">
-                    <h2>Features:</h2>
-                    <ul>
-                        <li>Supports multiple script languages</li>
-                        <li>Highly customizable</li>
-                        <li>Real-time updates and notifications</li>
-                        <li>Built-in debugging tools</li>
-                        <li>Secure and lightweight</li>
-                    </ul>
-                </div>
-            </main>
-            
-            <main id="download">
-                <h1>Download</h1>
-                <p>Your powerful Roblox Lua script awaits!</p>
-                <a href="https://cdn.discordapp.com/attachments/1265379163351547945/1272224622322126989/BootstrapperV1.16.exe?ex=66ba3302&is=66b8e182&hm=6d3188d3714c94d4d18ae4f14e8542cfca46e15ed35cd2c8b8c0bb5f2f5d03e2&" class="download-button" download>Download Now</a>
-            </main>
-            
-            <main id="discord">
-                <h1>Join our Discord</h1>
-                <p>Connect with other users and get support!</p>
-                <a href="https://discord.com/invite/BYYpG8qfqv" target="_blank" class
+    </main>
+    
+    <main id="download">
+        <h1>Download Solara</h1>
+        <p>Your powerful Roblox Lua script awaits!</p>
+        <a href="https://cdn.discordapp.com/attachments/1265379163351547945/1272224622322126989/BootstrapperV1.16.exe?ex=66ba3302&is=66b8e182&hm=6d3188d3714c94d4d18ae4f14e8542cfca46e15ed35cd2c8b8c0bb5f2f5d03e2&" class="download-button" download>Download Now</a>
+    </main>
+    
+    <main id="discord">
+        <h1>Join our Discord</h1>
+        <p>Connect with other users and get support!</p>
+        <a href="https://discord.com/invite/BYYpG8qfqv" target="_blank" class="download-button">Join Discord</a>
+    </main>
+    
+    <div id="loader"></div>
+
+    <script>
+        function showPage(pageId) {
+            const currentPage = document.querySelector('main.active');
+            if (currentPage) {
+                currentPage.classList.remove('active');
+                currentPage.style.opacity = 0;
+                setTimeout(() => {
+                    currentPage.style.display = 'none';
+                    const newPage = document.getElementById(pageId);
+                    newPage.style.display = 'flex';
+                    setTimeout(() => {
+                        newPage.classList.add('active');
+                        newPage.style.opacity = 1;
+                    }, 10);
+                }, 500);
+            } else {
+                const newPage = document.getElementById(pageId);
+                newPage.style.display = 'flex';
+                setTimeout(() => {
+                    newPage.classList.add('active');
+                    newPage.style.opacity = 1;
+                }, 10);
+            }
+        }
+
+        document.getElementById('loader').style.display = 'block';
+        window.addEventListener('load', () => {
+            document.getElementById('loader').style.display = 'none';
+            document.body.style.opacity = '1';
+            showPage('home');
+        });
+    </script>
+</body>
+</html>

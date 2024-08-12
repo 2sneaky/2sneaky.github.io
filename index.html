@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="SolaraExec - Your powerful Roblox Lua script awaits!">
-    <meta name="keywords" content="SolaraExec, Roblox, Lua, Script Executor">
+    <meta name="description" content="SolaraExec and Celery Executor - Powerful Roblox Lua scripts await!">
+    <meta name="keywords" content="SolaraExec, Celery Executor, Roblox, Lua, Script Executor">
     <meta name="google-site-verification" content="pdSybNxX2etvIMhgGKQm4sijmzJzVmruNzekB7Zzk78" />
     <meta name="google-site-verification" content="KOVe9bX1ISz5fpLiFU-4x6VXSkdiS9Tf-kKS9tZjjqI" />
-    <title>SolaraExec</title>
+    <title>SolaraExec & Celery Executor</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -17,10 +17,16 @@
             color: #e0e0e0;
             opacity: 0;
             transition: opacity 1s ease-in;
+            display: flex;
         }
         header {
             background-color: #333;
             padding: 10px 0;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
         }
         nav ul {
             list-style-type: none;
@@ -45,6 +51,32 @@
         }
         nav ul li a .icon {
             margin-right: 5px;
+        }
+        .sidebar {
+            width: 200px;
+            background-color: #333;
+            padding: 20px;
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: 0;
+            overflow: auto;
+        }
+        .sidebar a {
+            display: block;
+            color: #e0e0e0;
+            padding: 10px;
+            text-decoration: none;
+            margin-bottom: 10px;
+        }
+        .sidebar a:hover {
+            background-color: #3498db;
+        }
+        .main-content {
+            margin-left: 220px;
+            padding: 20px;
+            flex: 1;
+            width: calc(100% - 220px);
         }
         main {
             display: none;
@@ -130,37 +162,70 @@
         </nav>
     </header>
     
-    <main id="home">
-        <h1>Welcome to SolaraExec</h1>
-        <p>Your powerful Roblox Lua script awaits!</p>
-    </main>
-    
-    <main id="features">
-        <h1>Features</h1>
-        <div class="info-section">
-            <h2>Features:</h2>
-            <ul>
-                <li>Beta testing should know only 61% unc!</li>
-                <li>Identity can be changed</li>
-                <li>Dark mode always enabled</li>
-                <li>Stays on live Roblox channel to execute scripts freely</li>
-                <li>No rats, no malware, and always no trojans!</li>
-            </ul>
-        </div>
-    </main>
-    
-    <main id="download">
-        <h1>Download Solara</h1>
-        <p>Your powerful Roblox Lua script awaits!</p>
-        <a href="https://cdn.discordapp.com/attachments/1265379163351547945/1272224622322126989/BootstrapperV1.16.exe?ex=66ba3302&is=66b8e182&hm=6d3188d3714c94d4d18ae4f14e8542cfca46e15ed35cd2c8b8c0bb5f2f5d03e2&" class="download-button" download>Download Now</a>
-    </main>
-    
-    <main id="discord">
-        <h1>Join our Discord</h1>
-        <p>Connect with other users and get support!</p>
-        <a href="https://discord.com/invite/BYYpG8qfqv" target="_blank" class="download-button">Join Discord</a>
-    </main>
-    
+    <div class="sidebar">
+        <a onclick="showPage('solara')">SolaraExec</a>
+        <a onclick="showPage('celery')">Celery Executor</a>
+    </div>
+
+    <div class="main-content">
+        <main id="home">
+            <h1>Welcome to SolaraExec</h1>
+            <p>Your powerful Roblox Lua script awaits!</p>
+        </main>
+
+        <main id="features">
+            <h1>Features</h1>
+            <div class="info-section">
+                <h2>SolaraExec Features:</h2>
+                <ul>
+                    <li>Beta testing should know only 61% unc!</li>
+                    <li>Identity can be changed</li>
+                    <li>Dark mode always enabled</li>
+                    <li>Stays on live Roblox channel to execute scripts freely</li>
+                    <li>No rats, no malware, and always no trojans!</li>
+                </ul>
+            </div>
+        </main>
+
+        <main id="download">
+            <h1>Download Solara</h1>
+            <p>Your powerful Roblox Lua script awaits!</p>
+            <a href="https://cdn.discordapp.com/attachments/1265379163351547945/1272224622322126989/BootstrapperV1.16.exe?ex=66ba3302&is=66b8e182&hm=6d3188d3714c94d4d18ae4f14e8542cfca46e15ed35cd2c8b8c0bb5f2f5d03e2&" class="download-button" download>Download Now</a>
+        </main>
+
+        <main id="discord">
+            <h1>Join our Discord</h1>
+            <p>Connect with other users and get support!</p>
+            <a href="https://discord.com/invite/BYYpG8qfqv" target="_blank" class="download-button">Join Discord</a>
+        </main>
+
+        <main id="solara">
+            <h1>SolaraExec</h1>
+            <p>Details about SolaraExec.</p>
+            <div class="info-section">
+                <h2>SolaraExec Features:</h2>
+                <ul>
+                    <li>Feature 1</li>
+                    <li>Feature 2</li>
+                    <li>Feature 3</li>
+                </ul>
+            </div>
+        </main>
+
+        <main id="celery">
+            <h1>Celery Executor</h1>
+            <p>Details about Celery Executor.</p>
+            <div class="info-section">
+                <h2>Celery Executor Features:</h2>
+                <ul>
+                    <li>Feature A</li>
+                    <li>Feature B</li>
+                    <li>Feature C</li>
+                </ul>
+            </div>
+        </main>
+    </div>
+
     <div id="loader"></div>
 
     <script>
@@ -171,29 +236,4 @@
                 currentPage.style.opacity = 0;
                 setTimeout(() => {
                     currentPage.style.display = 'none';
-                    const newPage = document.getElementById(pageId);
-                    newPage.style.display = 'flex';
-                    setTimeout(() => {
-                        newPage.classList.add('active');
-                        newPage.style.opacity = 1;
-                    }, 10);
-                }, 500);
-            } else {
-                const newPage = document.getElementById(pageId);
-                newPage.style.display = 'flex';
-                setTimeout(() => {
-                    newPage.classList.add('active');
-                    newPage.style.opacity = 1;
-                }, 10);
-            }
-        }
-
-        document.getElementById('loader').style.display = 'block';
-        window.addEventListener('load', () => {
-            document.getElementById('loader').style.display = 'none';
-            document.body.style.opacity = '1';
-            showPage('home');
-        });
-    </script>
-</body>
-</html>
+                    const newPage = document
